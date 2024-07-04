@@ -92,35 +92,39 @@
           
         </p>
         <div class="buttons_div">
-            <button class="action_btn" onclick="Upper_Case()">Upper_Case</button>
-            <button class="action_btn" onclick="Lower_Case()">Lower_Case</button>
-            <button class="action_btn" onclick="Charater_Count()"> Character_Count</button>
-            <button class="action_btn">Words_Count</button>
+            <button class="action_btn" onclick="ActionResult_Case('Upper_Case')">Upper_Case</button>
+            <button class="action_btn" onclick="ActionResult_Case('Lower_Case')">Lower_Case</button>
+            <button class="action_btn" onclick="ActionResult_Case('Charater_Count')"> Character_Count</button>
+            <button class="action_btn" onclick="ActionResult_Case('Words_Count')">Words_Count</button>
 
 
         </div>
     </div>
     <script>
-        function Upper_Case()
+        const InputElement = document.getElementById("input_txt")
+        const reultElement = document.getElementById("result_txt")
+        function ActionResult_Case(action)
         {
-            const InputElement = document.getElementById("input_txt")
-            const reultElement = document.getElementById("result_txt")
-            reultElement.innerText = InputElement.value.toUpperCase()
+            if(action == 'Upper_Case')
+            {
+            
+                reultElement.innerText = InputElement.value.toUpperCase()
           
-        }
-        function Lower_Case()
-        {
-            const InputElement = document.getElementById("input_txt")
-            const reultElement = document.getElementById("result_txt")
-            reultElement.innerText = InputElement.value.toLowerCase()
-          
-        }
-        function Charater_Count()
-        {
-            const InputElement = document.getElementById("input_txt")
-            const reultElement = document.getElementById("result_txt")
-            reultElement.innerText = `Total Charater :${InputElement.value.length}`
-          
+            }
+            else if (action == 'Lower_Case')
+            {
+                reultElement.innerText = InputElement.value.toLowerCase()
+
+            }
+            else if (action == 'Charater_Count')
+            {
+                reultElement.innerText = `Total Charater :${InputElement.value.length}`
+
+            }
+            else
+            {
+                reultElement.innerText = `Total Charater :${InputElement.value.split(" ").length}`
+            }
         }
     </script>
    
