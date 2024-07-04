@@ -103,29 +103,28 @@
     <script>
         const InputElement = document.getElementById("input_txt")
         const reultElement = document.getElementById("result_txt")
-        function ActionResult_Case(action)
+
+      
+
+    function ActionResult_Case(action)
+    {
+           
+        switch(action)
         {
-            if(action == 'Upper_Case')
-            {
-            
-                reultElement.innerText = InputElement.value.toUpperCase()
-          
-            }
-            else if (action == 'Lower_Case')
-            {
+            case'Upper_Case':
+                reultElement.innerText =  InputElement.value.toUpperCase()
+                break;
+            case'Lower_Case':
                 reultElement.innerText = InputElement.value.toLowerCase()
-
-            }
-            else if (action == 'Charater_Count')
-            {
-                reultElement.innerText = `Total Charater :${InputElement.value.length}`
-
-            }
-            else
-            {
+                break;
+            case'Charater_Count':
+                  reultElement.innerText = `Total Charater :${InputElement.value.length}`
+                break;
+            default:
                 reultElement.innerText = `Total Charater :${InputElement.value.split(" ").length}`
-            }
+                
         }
+    }
     </script>
    
     
