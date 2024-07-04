@@ -93,7 +93,7 @@
         </p>
         <div class="buttons_div">
             <button class="action_btn" onclick="Upper_Case()">Upper_Case</button>
-            <button class="action_btn">Lower_Case</button>
+            <button class="action_btn" onclick="Lower_Case()">Lower_Case</button>
             <button class="action_btn"> Charater_Count</button>
             <button class="action_btn">Words_Count</button>
 
@@ -106,6 +106,13 @@
             const InputElement = document.getElementById("input_txt")
             const reultElement = document.getElementById("result_txt")
             reultElement.innerText = InputElement.value.toUpperCase()
+          
+        }
+        function Lower_Case()
+        {
+            const InputElement = document.getElementById("input_txt")
+            const reultElement = document.getElementById("result_txt")
+            reultElement.innerText = InputElement.value.toLowerCase()
           
         }
     </script>
